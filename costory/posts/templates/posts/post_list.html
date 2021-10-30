@@ -3,6 +3,6 @@
 {% block post_container %}
 	<h3>글 목록페이지</h3>
 	{% for post in posts %}
-		{{ post.title }} {{ post.dt_created }} {{ post.dt_modified }} <br/>
+		<a href="{% url 'post-detail' post.id %}">{{ post.title }}</a> {{ post.dt_created }} {{ post.dt_modified }} <br/>
 	{% endfor %}
 {% endblock post_container%}
