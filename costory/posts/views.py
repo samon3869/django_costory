@@ -8,3 +8,10 @@ def post_list(request):
         "posts": posts
     }
     return render(request, 'posts/post_list.html', context)
+
+def post_detail(request, post_id):
+    post = Post.objects.get(pk=post_id)
+    context = {
+        "post": post
+    }
+    return render(request, 'posts/post_detail.html', context)
