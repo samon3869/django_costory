@@ -19,7 +19,7 @@
 		</div>
 		<div class="editor">
 		<p>{{form.title}}</p>
-		{% for error in form.content.errors %}
+		{% for error in form.title.errors %}
 			<p class="error">{{error}}</p>
 		{% endfor %}
 		<p>{{form.content}}</p>
