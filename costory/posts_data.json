@@ -1,0 +1,12 @@
+[
+{
+  "model": "posts.post",
+  "pk": 6,
+  "fields": {
+    "title": "어보나오",
+    "content": "어보나오 만들고 싶다",
+    "dt_created": "2021-11-08T14:01:02.842Z",
+    "dt_modified": "2021-11-08T14:01:02.842Z"
+  }
+}
+]
