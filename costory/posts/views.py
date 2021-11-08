@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from django.http import Http404
 from .models import Post
 from .forms import PostForm
 
@@ -11,7 +12,10 @@ def post_list(request):
     return render(request, 'posts/post_list.html', context)
 
 def post_detail(request, post_id):
-    post = Post.objects.get(pk=post_id)
+    try:
+        post = Post.objects.get(pk=post_id)
+    except Post.DoesNotExist:
+        raise Http404()
     context = {
         "post": post
     }
